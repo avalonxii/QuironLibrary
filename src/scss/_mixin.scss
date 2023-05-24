@@ -242,3 +242,106 @@
         font-size: 0.75rem;
     }
 }
+
+//card
+@mixin card (){
+    width: 20.625rem;
+    height: 28.125rem;
+    border-radius: 0.625rem;
+    overflow: hidden;
+    border: 0.0125rem solid rgb(218, 218, 218);
+
+    &__foto {
+        position: relative;
+        height: 50%;
+        object-fit: contain;
+
+        img {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        span {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 20%;
+
+            background: rgb(80, 80, 80);
+            background: linear-gradient(
+                0deg,
+                rgba(80, 80, 80, 0.926437762605042) 0%,
+                rgba(199, 199, 199, 0) 100%
+            );
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__info {
+        background-color: white;
+        height: 50%;
+        padding: 1rem;
+
+        &--top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__extra-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        .chg__tags {
+            width: 100%;
+            max-width: 12.5rem;
+            padding-right: 1.7rem;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            text-transform: uppercase;
+
+            .html {
+                color: lightblue;
+            }
+
+            .css {
+                color: lightcoral;
+            }
+
+            .js {
+                color: lightgreen;
+            }
+
+            .api {
+                color: lightseagreen;
+            }
+        }
+    }
+
+    &__description {
+        height: 47%;
+        overflow: hidden;
+        font-size: 0.85rem;
+    }
+}
