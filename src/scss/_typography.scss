@@ -3,53 +3,8 @@
 $font-size:(
     'small': 0.833rem,
     'paragraph': 1rem,
-    'medium': 1.5rem,
+    'medium': 1.2rem,
     'subtitle': 2rem,
     'title' : 2.7rem,
     'big': 3.4rem,
 );
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6{
-    font-family: 'Poppins', sans-serif;
-}
-
-p,
-span,
-button{
-    font-family: 'JetBrains Mono', monospace
-}
-
- .small{
-    font-size: map-get($map: $font-size, $key: 'small');
-}
-
-.mini-title{
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-.paragraph{
-    font-size: map-get($map: $font-size, $key: 'paragraph');
-}
-
-.medium{
-    font-size: map-get($map: $font-size, $key: 'medium');
-}
-
-.subtitle{ // h3
-    font-size: map-get($map: $font-size, $key: 'subtitle');
-}
-
-.title{  // h2
-    font-size: map-get($map: $font-size, $key: 'title');
-}
-
-.big{
-    font-size: map-get($map: $font-size, $key: 'big');
-}
-

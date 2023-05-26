@@ -1,6 +1,6 @@
 @use './colors' as colors;
 
-@mixin containerPadding($paddingV: 0.8rem , $paddingH: 14%){
+@mixin containerPadding($paddingV: 0.8rem , $paddingH: 20%){
     width: 100%;
     padding: $paddingV $paddingH;
 }

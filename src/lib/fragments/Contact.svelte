@@ -1,14 +1,20 @@
 <script>
 	import TextArea from '../components/TextArea.svelte';
 	import Button from '../components/Button.svelte';
-	let usuario = ' ';
+
+	// cambiar componente
+
+	/** @type {string}*/
+	export let label;
+	export let usuario = true;
 </script>
 
 <div class="contact">
 	{#if usuario}
+		<p>{label}</p>
 		<TextArea />
-		<Button text="Send" primary />
+		<Button label="Send" primary />
 	{:else}
-		<Button text="Log in" primary />
+		<Button label="Log in" primary />
 	{/if}
 </div>

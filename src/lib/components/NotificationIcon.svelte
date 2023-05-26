@@ -1,8 +1,9 @@
 <script>
 	import Icon from '@iconify/svelte';
+
 	//@ts-check
 	/** @type {string[]}*/
-	export let notificaciones = [''];
+	export let notificaciones = [];
 </script>
 
 {#if notificaciones.length > 0}
@@ -34,6 +35,10 @@
 			bottom: 0.1875rem;
 			right: 0.1875rem;
 			transform: scale(0.7);
+		}
+
+		.icon {
+			color: map-get($map: colors.$colors, $key: 'error');
 		}
 	}
 </style>

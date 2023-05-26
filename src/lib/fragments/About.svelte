@@ -1,22 +1,24 @@
 <script>
+	import Paragraph from '$lib/components/fonts/Paragraph.svelte';
+	import Title from '$lib/components/fonts/Title.svelte';
 	import Avatar from '../components/Avatar.svelte';
 </script>
 
 <div class="aboutus__bc container">
 	<div class="aboutus__container">
-		<h2 class="subtitle">About Me</h2>
+		<div class="title"><Title>About Me</Title></div>
 		<div class="aboutus__info">
 			<h3 class="medium">HOLA, MI NOMBRE ES Avalon</h3>
 
 			<div class="aboutus__info-info">
 				<Avatar />
-				<p>
+				<Paragraph>
 					Soy un estudiante de ciclo formativo de grado superior y esta página web es mi TFG, que
 					nace ante la curiosidad de ver hasta donde llego con el desarrollo y estar presente en las
 					distintas etapas de este. El nombre de esta web es QUIRON que según la mitológia griega
 					fue un centauro inteligente, sabio y de buen carácter que fue tutor de héroes como Aquiles
 					o Áyax.
-				</p>
+				</Paragraph>
 			</div>
 		</div>
 	</div>
@@ -29,6 +31,7 @@
 	.aboutus {
 		&__bc {
 			margin-bottom: 3rem;
+			@include mixin.containerPadding();
 		}
 
 		&__container {
@@ -42,7 +45,7 @@
 				margin-bottom: 1.4rem;
 			}
 
-			.subtitle {
+			.title {
 				background-color: white;
 				position: absolute;
 				right: 20px;
@@ -55,10 +58,6 @@
 			align-items: center;
 			gap: 2rem;
 			margin-bottom: 3rem;
-		}
-
-		&__questions {
-			border-top: 2px solid map-get($map: colors.$colors, $key: 'gray');
 		}
 	}
 </style>

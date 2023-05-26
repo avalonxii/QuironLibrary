@@ -16,5 +16,9 @@
 		font-weight: bold;
 		text-transform: capitalize;
 		text-decoration: none;
+
+		&:hover {
+			transform: scale(1.1);
+		}
 	}
 </style>

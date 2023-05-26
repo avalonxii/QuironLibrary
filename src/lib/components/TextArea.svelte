@@ -1,10 +1,7 @@
 <script>
 	//@ts-check
-	/** @type {string}*/
-	export let label = 'label';
 </script>
 
-<div class="mini-title">{label}</div>
 <div class="text-area__wrapper">
 	<textarea name="textarea" class="input" cols="30" rows="10" />
 
