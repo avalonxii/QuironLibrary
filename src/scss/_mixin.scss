@@ -1,6 +1,6 @@
 @use './colors' as colors;
 
-@mixin containerPadding($paddingV: 0.8rem , $paddingH: 20%){
+@mixin containerPadding($paddingV: 0.8rem , $paddingH: 18%){
     width: 100%;
     padding: $paddingV $paddingH;
 }
@@ -8,6 +8,7 @@
 @mixin underlineAnimation(){
     position: relative;
     width: fit-content;
+    z-index: 0;
 
     &::before {
         content: "";

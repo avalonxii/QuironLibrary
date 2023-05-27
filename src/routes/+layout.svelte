@@ -9,7 +9,7 @@
 
 	let links = [
 		{ label: 'Home', href: '/' },
-		{ label: 'Challange', href: 'challange' },
+		{ label: 'Challenges', href: 'challenges' },
 		{ label: 'Community', href: 'community' },
 		{ label: 'Solution', href: 'solution' }
 	];

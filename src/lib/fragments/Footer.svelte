@@ -40,6 +40,7 @@
 	.footer {
 		background-color: map-get($map: colors.$colors, $key: 'bc-white');
 		width: 100%;
+		margin-top: 2.5rem;
 
 		&__content {
 			@include mixin.containerPadding;

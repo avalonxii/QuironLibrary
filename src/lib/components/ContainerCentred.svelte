@@ -9,7 +9,8 @@
 <style>
 	.container {
 		width: 100%;
-		padding: 0.8rem 14%;
+		padding: 0.8rem 18%;
+		
 	}
 
 	.display {

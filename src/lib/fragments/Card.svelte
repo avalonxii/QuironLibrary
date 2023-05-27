@@ -56,5 +56,6 @@
 
 	.card {
 		@include mixin.card();
+		min-width: 20.625rem;
 	}
 </style>
