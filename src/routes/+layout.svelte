@@ -11,7 +11,7 @@
 		{ label: 'Home', href: '/' },
 		{ label: 'Challenges', href: 'challenges' },
 		{ label: 'Community', href: 'community' },
-		{ label: 'Solution', href: 'solution' }
+		{ label: 'Solutions', href: 'solutions' }
 	];
 </script>
 
@@ -36,10 +36,15 @@
 <style lang="scss">
 	@use '../scss/reset';
 	@use '../scss/colors';
+	@use '../scss/mixin';
 
 	.contenido {
 		min-height: 100vh;
 		padding-top: 4.0625rem;
+	}
+
+	:global(.text-ellipsis) {
+		@include mixin.text-ellipsis(4);
 	}
 
 	:global(.icon) {

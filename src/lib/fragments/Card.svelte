@@ -1,4 +1,6 @@
 <script>
+	import Paragraph from '$lib/components/fonts/Paragraph.svelte';
+	import Subtitle from '$lib/components/fonts/Subtitle.svelte';
 	import Completed from '../components/Completed.svelte';
 	import Difficulty from '../components/Difficulty.svelte';
 	import Like from '../components/Like.svelte';
@@ -46,7 +48,7 @@
 			<div class="chg__level"><Difficulty {difficulty} /></div>
 		</div>
 		<div class="card__description">
-			<p>{description}</p>
+			<Paragraph>{description}</Paragraph>
 		</div>
 	</div>
 </div>

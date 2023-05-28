@@ -5,13 +5,11 @@
 	// cambiar componente
 
 	/** @type {string}*/
-	export let label;
 	export let usuario = true;
 </script>
 
 <div class="contact">
 	{#if usuario}
-		<p>{label}</p>
 		<TextArea />
 		<Button label="Send" primary />
 	{:else}

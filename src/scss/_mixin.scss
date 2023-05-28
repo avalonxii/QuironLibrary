@@ -5,6 +5,19 @@
     padding: $paddingV $paddingH;
 }
 
+@mixin text-ellipsis($lineclamp: null) {
+    overflow: hidden;
+  
+    @if $lineclamp {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: $lineclamp;
+    } @else {
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+
 @mixin underlineAnimation(){
     position: relative;
     width: fit-content;
@@ -341,8 +354,6 @@
     }
 
     &__description {
-        height: 47%;
-        overflow: hidden;
-        font-size: 0.85rem;
+        @include text-ellipsis(4);
     }
 }

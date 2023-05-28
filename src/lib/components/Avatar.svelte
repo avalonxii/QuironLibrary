@@ -11,7 +11,7 @@
 	export let small = false;
 </script>
 
-<div class="avatar-component__photo" style="--size: {small ? '2.3rem' : '10.625rem'}">
+<div class="avatar-component__photo" style="--size: {small ? '3rem' : '10.625rem'}">
 	{#if editable}
 		<div class="avatar-component__edit">
 			<input type="file" name="image" accept="image/*" />
@@ -27,11 +27,13 @@
 		&__photo {
 			min-width: var(--size);
 			width: var(--size);
+			height: var(--size);
 			position: relative;
 			border-radius: 100%;
 			border: 0.0625rem solid #f8f8f8;
 			box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.1);
 			user-select: none;
+			cursor: pointer;
 
 			> img {
 				width: 100%;
