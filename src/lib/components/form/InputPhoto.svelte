@@ -5,6 +5,7 @@
 
 	/* 	import img from '$uploads/9967bc31-430d-417d-99b6-e8245f106754.webp';
 	 */
+
 	let uploadedImg: string;
 
 	const handleSelectedImg = (e: Event) => {

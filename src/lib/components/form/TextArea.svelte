@@ -2,7 +2,7 @@
 	//@ts-check
 
 	/** @type {boolean}*/
-	export let error;
+	export let error = false;
 </script>
 
 <div class="text-area__wrapper">

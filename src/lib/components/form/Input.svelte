@@ -13,7 +13,7 @@
 	export let name = 'name';
 
 	/** @type {boolean}*/
-	export let error;
+	export let error = false;
 
 	let props = { ...$$restProps };
 
