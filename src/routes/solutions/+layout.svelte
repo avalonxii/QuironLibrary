@@ -15,7 +15,9 @@
 		</div>
 	</div>
 </ContainerCentred>
-<slot />
+<div class="contenido">
+	<slot />
+</div>
 
 <style>
 	.solution-container {

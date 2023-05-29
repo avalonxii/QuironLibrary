@@ -9,6 +9,11 @@
 	let src = 'https://www.lavanguardia.com/files/og_thumbnail/uploads/2022/07/25/62de6567185fa.jpeg';
 
 	let tags = ['html', 'css', 'js', 'api'];
+
+	//event
+	const handlerNavigation = () => {
+		console.log('navigate to sun');
+	};
 </script>
 
 <!-- 
@@ -43,10 +48,10 @@
 	</ContainerCentred>
 </div> -->
 
-<Card>
+<Card on:click={handlerNavigation}>
 	<img slot="card__image" {src} alt="imagen ejercicio" />
 	<span slot="card__submitted-date">submitetd 5 minutes ago</span>
-	<span class="card__title" slot="card__title">Title de prueba largo ellipsis</span>
+	<span class="card__title" slot="card__title"> Title de prueba largo ellipsis </span>
 	<div slot="card__difficulty">
 		<Difficulty />
 	</div>

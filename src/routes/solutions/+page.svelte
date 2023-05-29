@@ -11,12 +11,17 @@
 	export let data;
 
 	let tags = ['html', 'css', 'js', 'api'];
+
+	//events
+	const handlerNavigation = () => {
+		console.log('navigate to sun');
+	};
 </script>
 
 <div class="bc">
 	<ContainerCentred>
 		<div class="solution__cards">
-			<Card solution>
+			<Card on:click={handlerNavigation} solution>
 				<img slot="card__image" {src} alt="imagen ejercicio" />
 				<span slot="card__submitted-date">submitetd 5 minutes ago</span>
 				<span slot="card__title">Title</span>
@@ -42,7 +47,7 @@
 				</div>
 
 				<div slot="card__user">
-					<MiniUserCard />
+					<MiniUserCard on:click={() => console.log('user')} />
 				</div>
 
 				Ejemplo dedescripcion del solucion, Lorem ipsum dolor sit amet consectetur adipisicing elit.

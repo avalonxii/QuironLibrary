@@ -22,8 +22,8 @@
 			<li><Link {label} {href} /></li>
 		{/each}
 
-		<li><NotificationIcon /></li>
-		<li><Avatar small /></li>
+		<li><NotificationIcon on:click={() => console.log('go to notifications')} /></li>
+		<li><Avatar small on:click={() => console.log('go to profile')} /></li>
 	</Menu>
 </Header>
 
@@ -38,7 +38,7 @@
 	@use '../scss/colors';
 	@use '../scss/mixin';
 
-	.contenido {
+	:global(.contenido) {
 		min-height: 100vh;
 		padding-top: 4.0625rem;
 	}

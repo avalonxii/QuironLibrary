@@ -8,9 +8,9 @@
 	<div class="footer__content">
 		<div class="footer__logo">Quiron</div>
 		<div class="footer__social">
-			<Icon class="icon" icon="ph:instagram-logo-fill" />
-			<Icon class="icon" icon="ph:twitter-logo-fill" />
-			<Icon class="icon" icon="mdi:facebook" />
+			<a href="/#"><Icon class="icon" icon="ph:instagram-logo-fill" /></a>
+			<a href="/#"><Icon class="icon" icon="ph:twitter-logo-fill" /></a>
+			<a href="/#"><Icon class="icon" icon="mdi:facebook" /></a>
 		</div>
 		<div class="footer__contact">
 			<p class="mini-title">
@@ -27,8 +27,8 @@
 		</p>
 
 		<div>
-			<Icon class="icon" icon="fluent-mdl2:git-hub-logo" />
-			<Icon class="icon" icon="ph:instagram-logo-fill" />
+			<a href="/#"><Icon class="icon" icon="fluent-mdl2:git-hub-logo" /></a>
+			<a href="/#"><Icon class="icon" icon="ph:instagram-logo-fill" /></a>
 		</div>
 	</div>
 </div>

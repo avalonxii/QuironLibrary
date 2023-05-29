@@ -1,5 +1,5 @@
 <script>
-	import TextArea from '../components/TextArea.svelte';
+	import TextArea from '../components/form/TextArea.svelte';
 	import Button from '../components/Button.svelte';
 
 	// cambiar componente

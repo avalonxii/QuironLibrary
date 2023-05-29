@@ -11,11 +11,13 @@
 	<div class="challange-container">
 		<Title>Challenges</Title>
 		<div class="filtros">
-			<Button label={"filtro"} />
+			<Button label={'filtro'} />
 		</div>
 	</div>
 </ContainerCentred>
-<slot />
+<div class="contenido">
+	<slot />
+</div>
 
 <style>
 	.challange-container {

@@ -5,21 +5,18 @@
 
 	/** @type {boolean}*/
 	export let solution = false;
-
-	/** @type {number}*/
-	export let id = 0;
 </script>
 
 <div class="card__container">
-	<div class="card__image">
+	<button class="card__image" on:click>
 		<slot name="card__image" />
-	</div>
+	</button>
 
 	<div class="card__info">
 		<div class="card__header">
 			{#if solution}<Smalltext><slot name="card__submitted-date" /></Smalltext>{/if}
 			<div class="card__title">
-				<Subtitle><slot name="card__title" /></Subtitle>
+				<button on:click><Subtitle><slot name="card__title" /></Subtitle></button>
 				<slot name="card__difficulty" />
 			</div>
 			<div class="card__submitted-hashtags">
@@ -47,6 +44,12 @@
 
 	$border-radius: 0.65rem;
 	$interPadding: 1rem;
+
+	button {
+		background-color: transparent;
+		text-align: start;
+		font-size: 1rem;
+	}
 
 	.card {
 		&__container {

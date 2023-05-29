@@ -1,5 +1,7 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import { createEventDispatcher } from 'svelte';
+
 	//@ts-check
 	/** @type {string} */
 	export let src = 'http://i.pravatar.cc/500?img=7';
@@ -11,7 +13,7 @@
 	export let small = false;
 </script>
 
-<div class="avatar-component__photo" style="--size: {small ? '3rem' : '10.625rem'}">
+<button class="avatar-component__photo" style="--size: {small ? '3rem' : '10.625rem'}" on:click>
 	{#if editable}
 		<div class="avatar-component__edit">
 			<input type="file" name="image" accept="image/*" />
@@ -20,7 +22,7 @@
 	{/if}
 
 	<img {src} alt="foto de perfil usuario" />
-</div>
+</button>
 
 <style lang="scss">
 	.avatar-component {

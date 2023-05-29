@@ -6,14 +6,14 @@
 	export let notificaciones = [];
 </script>
 
-{#if notificaciones.length > 0}
-	<div class="noti__wrapper">
+<button class="noti__wrapper" on:click>
+	{#if notificaciones.length > 0}
 		<Icon class="icon" icon="tabler:bell-ringing-filled" />
 		<span />
-	</div>
-{:else}
-	<Icon class="icon" icon="tabler:bell-filled" />
-{/if}
+	{:else}
+		<Icon class="icon" icon="tabler:bell-filled" />
+	{/if}
+</button>
 
 <style lang="scss">
 	@use '../../scss/colors';
@@ -21,6 +21,7 @@
 	.noti__wrapper {
 		position: relative;
 		width: fit-content;
+		background-color: transparent;
 
 		span {
 			border: 0.125rem solid map-get($map: colors.$colors, $key: 'gray');

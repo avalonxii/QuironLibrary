@@ -1,20 +1,33 @@
 <script>
 	//@ts-check
+
+	/** @type {boolean}*/
+	export let error;
 </script>
 
 <div class="text-area__wrapper">
 	<textarea name="textarea" class="input" cols="30" rows="10" />
 
 	<span class="focus-bg" />
-	<span class="error-msg">mensaje de error</span>
+	<span class={error ? 'error' : 'normal'}>mensaje de error</span>
 </div>
 
 <style lang="scss">
-	@use '../../scss/mixin';
-	@use '../../scss/colors';
+	@use '../../../scss/mixin';
+	@use '../../../scss/colors';
+
+	.error {
+		padding: 0.75rem;
+		color: map-get($map: colors.$colors, $key: 'error');
+	}
+
+	.normal {
+		display: none;
+	}
 
 	.text-area__wrapper {
 		@include mixin.input();
+		min-height: 13rem;
 
 		.input {
 			height: 10.625rem;

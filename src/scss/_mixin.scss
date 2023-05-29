@@ -48,6 +48,7 @@
     justify-content: center;
     position: relative;
     min-width: 8.75rem;
+    width: 100%;
     padding: 0.3125rem 1.25rem;
     border-radius: 0.9rem;
     
@@ -168,11 +169,6 @@
         }
     }
 
-    .error-msg{
-        padding: 0.75rem;
-        color: map-get($map: colors.$colors, $key: 'error');
-    }
-
     .focus-bg {
         position: absolute;
         top: 0;
@@ -222,10 +218,10 @@
                 color: $lineColor;
                 transform: translate3d(0, -0.75rem, 0) scale(0.75);
             }
-            /* + .focus-bg {
+            + .focus-bg {
                 transform: scaleX(1);
                 transition: all 0.1s ease;
-            } */
+            }
         }
     }
 }
