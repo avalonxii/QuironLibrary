@@ -4,13 +4,17 @@
 	/** @type {string}*/
 	export let label = 'label';
 
-	/**
-	 *  tipos : password, resto(email, text , date)
-	 *  @type {string}*/
-	export let type = 'type';
-
 	/** @type {string}*/
 	export let name = 'name';
+
+	/** @type {string}*/
+	export let type = 'text';
+
+	/** @type {string}*/
+	export let value = '';
+
+	/** @type {boolean}*/
+	export let required = false;
 
 	/** @type {boolean}*/
 	export let error = false;
@@ -18,6 +22,8 @@
 	let props = { ...$$restProps };
 
 	let seePassw = false;
+
+	//value={props.value ?? ''}
 </script>
 
 <div class="input__wrapper">
@@ -25,13 +31,19 @@
 		class={`input ${props.class}`}
 		type={seePassw ? 'text' : type}
 		placeholder="&nbsp;"
+		{value}
 		{name}
+		{required}
 	/>
 
 	<label class="label" for="input">{label}</label>
 
 	{#if type == 'password'}
-		<button class="icon {seePassw ? 'icon--active' : ''}" on:click={() => (seePassw = !seePassw)}>
+		<button
+			type="button"
+			class="icon {seePassw ? 'icon--active' : ''}"
+			on:click={() => (seePassw = !seePassw)}
+		>
 			{#if seePassw}
 				<Icon icon="mdi:eye" />
 			{:else}
@@ -41,7 +53,7 @@
 	{/if}
 
 	<span class="focus-bg" />
-	<span class={error ? 'error' : 'normal'}>mensaje de error</span>
+	<span class={error ? 'error' : 'normal'}><slot /></span>
 </div>
 
 <style lang="scss">

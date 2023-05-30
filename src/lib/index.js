@@ -5,6 +5,7 @@ export { default as Avatar } from './components/Avatar.svelte';
 export { default as Button } from './components/Button.svelte';
 export { default as Checkbox } from './components/Checkbox.svelte';
 export { default as Completed } from './components/Completed.svelte';
+export { default as ContainerCentred } from './components/ContainerCentred.svelte';
 export { default as Difficulty } from './components/Difficulty.svelte';
 export { default as Header } from './components/Header.svelte';
 export { default as Link } from './components/Link.svelte';

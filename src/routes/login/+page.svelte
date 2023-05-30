@@ -12,7 +12,7 @@
 	<ContainerCentred>
 		<form action="" class="login__container">
 			<div class="title"><Title>Log In</Title></div>
-			<Input label="Enter your email" type="email" />
+			<Input label="Enter your email" type="email" required />
 			<Input label="Enter your password" type="password" />
 			<Button label="Enviar">enviar</Button>
 		</form>

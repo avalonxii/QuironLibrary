@@ -1,6 +1,6 @@
 {
 	"name": "quironlibrary",
-	"version": "1.5.3",
+	"version": "1.5.12",
 	"license": "MIT",
 	"scripts": {
 		"dev": "vite dev",

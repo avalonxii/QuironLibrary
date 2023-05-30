@@ -35,6 +35,8 @@
 			font-size: 2rem;
 			color: map-get($map: colors.$colors, $key: 'white');
 			cursor: pointer;
+
+			z-index: 999;
 		}
 	}
 </style>
