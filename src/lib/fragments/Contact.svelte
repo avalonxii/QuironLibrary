@@ -11,8 +11,8 @@
 <div class="contact">
 	{#if usuario}
 		<TextArea />
-		<Button label="Send" primary />
+		<Button type="submit" label="Send" primary />
 	{:else}
-		<Button label="Log in" primary />
+		<Button type="button" label="Log in" primary />
 	{/if}
 </div>

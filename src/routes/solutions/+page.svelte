@@ -4,6 +4,7 @@
 	import Card from '$lib/components/card/Card.svelte';
 	import MetaIcon from '$lib/components/MetaIcon.svelte';
 	import MiniUserCard from '$lib/components/card/MiniUserCard.svelte';
+	import Avatar from '$lib/components/Avatar.svelte';
 
 	let src = 'https://www.lavanguardia.com/files/og_thumbnail/uploads/2022/07/25/62de6567185fa.jpeg';
 
@@ -22,10 +23,16 @@
 	<ContainerCentred>
 		<div class="solution__cards">
 			<Card on:click={handlerNavigation} solution>
-				<img slot="card__image" {src} alt="imagen ejercicio" />
+				<img slot="card__image" alt="imagen ejercicio" />
 				<span slot="card__submitted-date">submitetd 5 minutes ago</span>
 				<span slot="card__title">Title</span>
-				<div slot="card__submitted-hashtags">#hola</div>
+				<div slot="card__submitted-hashtags">
+					<span>#hola</span>
+					<span>#hola</span>
+					<span>#hola</span>
+					<span>#hola</span>
+					<span>#hola </span>
+				</div>
 				<div class="card__tags" slot="card__tags">
 					{#each tags as tag}
 						<span class={`card__tags--${tag}`}>{tag}</span>
@@ -47,7 +54,14 @@
 				</div>
 
 				<div slot="card__user">
-					<MiniUserCard on:click={() => console.log('user')} />
+					<MiniUserCard on:click={() => console.log('user')}>
+						<div slot="card__image">
+							<Avatar small />
+						</div>
+						<span slot="card__main-data">nombre</span>
+						<span slot="card__extra-data">50</span>
+						<span slot="card__sub-data">@User</span>
+					</MiniUserCard>
 				</div>
 
 				Ejemplo dedescripcion del solucion, Lorem ipsum dolor sit amet consectetur adipisicing elit.

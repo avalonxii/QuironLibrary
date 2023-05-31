@@ -28,7 +28,7 @@
 
 <div class="input__wrapper">
 	<input
-		class={`input ${props.class}`}
+		class={`input ${props.class} ${error ? 'error-input' : ''}`}
 		type={seePassw ? 'text' : type}
 		placeholder="&nbsp;"
 		{value}
@@ -36,7 +36,7 @@
 		{required}
 	/>
 
-	<label class="label" for="input">{label}</label>
+	<label class="label" for={name}>{label}</label>
 
 	{#if type == 'password'}
 		<button
@@ -69,6 +69,23 @@
 	.error {
 		padding: 0.75rem;
 		color: map-get($map: colors.$colors, $key: 'error');
+
+		&-input {
+			background-color: rgba(map-get($map: colors.$colors, $key: 'error'), 0.45) !important;
+
+			&:focus {
+				box-shadow: inset 0 -0.125rem 0 map-get($map: colors.$colors, $key: 'error') !important;
+
+				+ .label {
+					color: map-get($map: colors.$colors, $key: 'black') !important;
+					transform: translate3d(0, -0.75rem, 0) scale(0.75);
+				}
+				+ .focus-bg {
+					transform: scaleX(1);
+					transition: all 0.1s ease;
+				}
+			}
+		}
 	}
 
 	.normal {

@@ -15,8 +15,8 @@
 		<form action="" class="register__container">
 			<div class="title"><Title>Register</Title></div>
 			<div class="register__inputs">
-				<Input label="what's ur name?" type="text" name="name" />
-				<Input label="what's ur usernme?" type="text" name="username" />
+				<Input label="what's ur name?" type="text" name="name">hola</Input>
+				<Input label="what's ur usernme?" type="text" name="username">hola</Input>
 				<Input label="what's ur email?" type="email" name="email" />
 				<Input label="what's ur password?" type="password" name="password" />
 				<Input label="repeat password" type="password" />

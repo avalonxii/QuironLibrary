@@ -1,17 +1,17 @@
 <script>
-	import Avatar from '$lib/components/Avatar.svelte';
 	import Smalltext from '$lib/components/fonts/Smalltext.svelte';
-
-	export let user;
 </script>
 
 <button class="card-user__container" on:click>
-	<Avatar small />
+	<div class="card__image">
+		<slot name="card__image" />
+	</div>
 	<div class="card-user__info">
 		<div class="card-user__name">
-			nombre <li class="points">50</li>
+			<slot name="card__main-data" />
+			<li class="points"><slot name="card__extra-data" /></li>
 		</div>
-		<Smalltext>@Usuarios</Smalltext>
+		<Smalltext><slot name="card__sub-data" /></Smalltext>
 	</div>
 </button>
 

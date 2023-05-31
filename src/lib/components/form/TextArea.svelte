@@ -3,10 +3,13 @@
 
 	/** @type {boolean}*/
 	export let error = false;
+
+	/** @type {string}*/
+	export let name = '';
 </script>
 
 <div class="text-area__wrapper">
-	<textarea name="textarea" class="input" cols="30" rows="10" />
+	<textarea {name} class="input" cols="30" rows="10" />
 
 	<span class="focus-bg" />
 	<span class={error ? 'error' : 'normal'}>mensaje de error</span>

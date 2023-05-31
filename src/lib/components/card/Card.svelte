@@ -60,10 +60,9 @@
 		}
 
 		&__image {
-			border-top-left-radius: $border-radius;
-			border-top-right-radius: $border-radius;
 			height: 14.375rem;
 			overflow: hidden;
+			width: 100%;
 
 			cursor: pointer;
 		}
@@ -76,6 +75,7 @@
 			padding-bottom: $interPadding;
 			display: flex;
 			justify-content: space-between;
+			text-transform: capitalize;
 		}
 		&__submitted-hashtags {
 			color: map-get($map: colors.$colors, $key: 'primary');

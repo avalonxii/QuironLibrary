@@ -35,6 +35,7 @@
 
 	button {
 		background-color: transparent;
+		pointer-events: none;
 	}
 
 	.input {

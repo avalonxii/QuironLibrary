@@ -12,10 +12,12 @@
 
 	/** @type {boolean} */
 	export let disabled = false;
+
+	let props = { ...$$restProps };
 </script>
 
 {#if code}
-	<button on:click class="code">
+	<button type="button" on:click class="code">
 		<span>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 				<path fill="none" d="M0 0h24v24H0z" />
@@ -28,7 +30,8 @@
 		</span>
 	</button>
 {:else}
-	<button on:click class={secondary ? 'secondary' : 'primary'} {disabled}>{label}</button>
+	<button {...props} on:click class={secondary ? 'secondary' : 'primary'} {disabled}>{label}</button
+	>
 {/if}
 
 <style lang="scss">
