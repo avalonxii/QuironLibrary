@@ -7,12 +7,12 @@
 	export let solution = false;
 </script>
 
-<div class="card__container">
+<div class={`card__container ${solution ? 'solution' : ''}`}>
 	<button class="card__image" on:click>
 		<slot name="card__image" />
 	</button>
 
-	<div class={`card__info ${solution}`}>
+	<div class={`card__info `}>
 		<div class="card__header">
 			{#if solution}<Smalltext><slot name="card__submitted-date" /></Smalltext>{/if}
 			<div class="card__title">
@@ -52,14 +52,14 @@
 	}
 
 	.solution {
-		width: 22rem !important;
+		width: 24rem !important;
 	}
 
 	.card {
 		&__container {
 			border: 0.125rem solid map-get($map: colors.$colors, $key: 'gray');
 			border-radius: $border-radius;
-			width: 20.5rem;
+			width: 22.5rem;
 			overflow: hidden;
 
 			.meta--info {
