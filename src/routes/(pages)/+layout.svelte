@@ -34,9 +34,9 @@
 <Footer />
 
 <style lang="scss">
-	@use '../scss/reset';
-	@use '../scss/colors';
-	@use '../scss/mixin';
+	@use '../../scss/reset';
+	@use '../../scss/colors';
+	@use '../../scss/mixin';
 
 	:global(.contenido) {
 		min-height: 100vh;

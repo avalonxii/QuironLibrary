@@ -4,7 +4,7 @@
 	import Paragraph from '$lib/components/fonts/Paragraph.svelte';
 	import Title from '$lib/components/fonts/Title.svelte';
 	import About from '$lib/fragments/About.svelte';
-	import '../scss/_typography.scss';
+	import '../../scss/_typography.scss';
 
 	//@ts-check
 </script>
@@ -41,8 +41,8 @@
 <About />
 
 <style lang="scss">
-	@use '../scss/colors';
-	@use '../scss/mixin';
+	@use '../../scss/colors';
+	@use '../../scss/mixin';
 
 	.home {
 		&__container {

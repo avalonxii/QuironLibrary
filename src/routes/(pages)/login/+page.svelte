@@ -20,7 +20,7 @@
 </div>
 
 <style lang="scss">
-	@use '../../scss/colors';
+	@use '../../../scss/colors';
 
 	.login {
 		&__container {

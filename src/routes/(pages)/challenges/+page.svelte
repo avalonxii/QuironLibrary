@@ -72,7 +72,7 @@
 </Card>
 
 <style lang="scss">
-	@use '../../scss/mixin';
+	@use '../../../scss/mixin';
 
 	.centro {
 		display: flex;

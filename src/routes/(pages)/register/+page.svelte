@@ -37,7 +37,7 @@
 </div>
 
 <style lang="scss">
-	@use '../../scss/colors';
+	@use '../../../scss/colors';
 
 	.register {
 		&__container {

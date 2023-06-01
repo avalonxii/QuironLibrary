@@ -40,7 +40,7 @@
 </ContainerCentred>
 
 <style lang="scss">
-	@use '../../../scss/colors';
+	@use '../../../../scss/colors';
 
 	.edit {
 		&__container {
