@@ -1,8 +1,11 @@
 <script>
 	import Smalltext from '$lib/components/fonts/Smalltext.svelte';
+
+	/** @type {boolean}*/
+	export let border = false;
 </script>
 
-<button class="card-user__container" on:click>
+<button class={`card-user__container ${border ? 'border' : ''}`} on:click>
 	<div class="card__image">
 		<slot name="card__image" />
 	</div>
@@ -23,6 +26,12 @@
 		background-color: transparent;
 		text-align: start;
 		font-size: 1rem;
+	}
+
+	.border {
+		border: 0.3125rem solid map-get($map: colors.$colors, $key: 'gray') !important;
+		border-radius: 0.625rem;
+		padding: 0.5rem;
 	}
 
 	.card-user {
