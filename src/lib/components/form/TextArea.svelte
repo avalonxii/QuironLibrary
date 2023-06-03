@@ -6,10 +6,13 @@
 
 	/** @type {string}*/
 	export let name = '';
+
+	/** @type {string}*/
+	export let value = '';
 </script>
 
 <div class="text-area__wrapper">
-	<textarea {name} class="input" cols="30" rows="10" maxlength="150" />
+	<textarea {name} class="input" {value} cols="30" rows="10" maxlength="150" />
 
 	<span class="focus-bg" />
 	<span class={error ? 'error' : 'normal'}>mensaje de error</span>

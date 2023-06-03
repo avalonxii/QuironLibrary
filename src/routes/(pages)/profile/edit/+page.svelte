@@ -1,5 +1,6 @@
 <script>
 	import Avatar from '$lib/components/Avatar.svelte';
+	import Button from '$lib/components/Button.svelte';
 	import ContainerCentred from '$lib/components/ContainerCentred.svelte';
 	import Minititle from '$lib/components/fonts/Minititle.svelte';
 	import Title from '$lib/components/fonts/Title.svelte';
@@ -35,6 +36,7 @@
 				<Minititle>About Me:</Minititle>
 				<TextArea />
 			</div>
+			<Button type="submit" label="Editar !!" />
 		</div>
 	</form>
 </ContainerCentred>

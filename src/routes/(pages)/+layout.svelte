@@ -6,6 +6,7 @@
 	import Header from '$lib/components/Header.svelte';
 	import Menu from '$lib/components/Menu.svelte';
 	import Footer from '$lib/fragments/Footer.svelte';
+	import Button from '$lib/components/Button.svelte';
 
 	let links = [
 		{ label: 'Home', href: '/' },
@@ -24,6 +25,7 @@
 
 		<li><NotificationIcon on:click={() => console.log('go to notifications')} /></li>
 		<li><Avatar small on:click={() => console.log('go to profile')} /></li>
+		<button class="log-out">Log Out</button>
 	</Menu>
 </Header>
 
@@ -55,6 +57,27 @@
 
 		&:hover {
 			transform: scale(1.1);
+		}
+	}
+
+	.log-out {
+		border: 3px solid map-get($map: colors.$colors, $key: 'error');
+		background-color: map-get($map: colors.$colors, $key: 'error');
+		border-radius: 0.4rem;
+		padding: 0.5rem;
+		font-weight: bold;
+		color: map-get($map: colors.$colors, $key: 'white');
+		cursor: pointer;
+		user-select: none;
+
+		&:hover {
+			background-color: transparent;
+			color: map-get($map: colors.$colors, $key: 'error');
+		}
+
+		&:active {
+			transform: scale(0.9);
+			transition: 0.2s;
 		}
 	}
 </style>

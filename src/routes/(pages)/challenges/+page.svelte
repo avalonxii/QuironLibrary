@@ -116,10 +116,10 @@
 	img {
 		width: 100%;
 		height: 100%;
+		transition: all 0.25s;
 
 		&:hover {
 			transform: scale(1.1);
-			transition: 0.35s;
 		}
 	}
 </style>
