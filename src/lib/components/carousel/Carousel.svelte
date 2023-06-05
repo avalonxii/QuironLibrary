@@ -106,7 +106,7 @@
 </script>
 
 <div class="carousel__container">
-	<div bind:this={siema}>
+	<div class="carousel__photo" bind:this={siema}>
 		<slot />
 	</div>
 
@@ -146,6 +146,10 @@
 
 			display: flex;
 			justify-content: center;
+		}
+
+		&_photo {
+			min-width: 100%;
 		}
 
 		&__buttons {

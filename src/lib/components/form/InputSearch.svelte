@@ -4,11 +4,22 @@
 
 	/** @type {string}*/
 	export let name = '';
+
+	/** @type {string}*/
+	export let value = '';
 </script>
 
 <div class="search__container" onsubmit="event.preventDefault();" role="search">
 	<label class="search__label" for="search">{label}</label>
-	<input class="search__input" type="search" placeholder={label} {name} required />
+	<input
+		class="search__input"
+		type="search"
+		placeholder={label}
+		{name}
+		bind:value
+		on:keydown
+		required
+	/>
 	<button class="search__button" type="button">Go</button>
 </div>
 
@@ -40,6 +51,7 @@
 			background: map-get($map: colors.$colors, $key: 'success');
 			color: map-get($map: colors.$colors, $key: 'white');
 			border-radius: 0 0.5rem 0.5rem 0;
+			cursor: pointer;
 		}
 
 		&__input:not(:placeholder-shown) {

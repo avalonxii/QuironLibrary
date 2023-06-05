@@ -19,6 +19,7 @@ export { default as Tag } from './components/Tag.svelte';
 //forms
 export { default as Input } from './components/form/Input.svelte';
 export { default as TextArea } from './components/form/TextArea.svelte';
+export { default as InputSearch } from './components/form/InputSearch.svelte';
 export { default as InputPhoto } from './components/form/InputPhoto.svelte';
 
 //fonts
